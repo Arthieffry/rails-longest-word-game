@@ -2,7 +2,7 @@ require "open-uri"
 
 class PagesController < ApplicationController
   def game
-    @grid = (0..9).map { (65 + rand(26)).chr }
+    @grid = (0...9).map { (65 + rand(26)).chr }
     @start_time = Time.now.to_i
   end
 
@@ -16,7 +16,6 @@ class PagesController < ApplicationController
       @result[:score] = (10 - @result[:time]/10) + @attempt.size
     else
       @result[:score] = 0
-      @result[:time] = "null"
     end
     @result
   end
