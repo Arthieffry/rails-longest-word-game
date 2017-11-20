@@ -1,0 +1,15 @@
+
+<h1>Tente ta chance, Jacky(ie) :</h1>
+<div id="letters">
+<%@grid.each do |letter|  %>
+  <div class="letter"><%= letter %></div>
+<% end %>
+</div>
+
+<form action="/score">
+  <label for="question">Entre ton mot</label>
+  <input type="hidden" name="grid" value="<%= @grid.join %>">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <input type="text" id="attempt" name="attempt" placeholder="Tentative">
+  <input type="submit" value="Lets go!">
+</form>
