@@ -7,9 +7,8 @@
 </div>
 
 <form action="/score">
-  <label for="question">Entre ton mot</label>
   <input type="hidden" name="grid" value="<%= @grid.join %>">
   <input type="hidden" name="start_time" value="<%= @start_time %>">
-  <input type="text" id="attempt" name="attempt" placeholder="Tentative">
-  <input type="submit" value="Lets go!">
+  <input type="text" id="attempt" name="attempt" class="form-control" placeholder="Entrez votre mot">
+  <input type="submit" class="btn btn-primary button" value="Lets go!">
 </form>
